@@ -4,6 +4,7 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.HeadlessException;
 import java.awt.PopupMenu;
+import java.awt.event.KeyEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -59,6 +60,7 @@ public class ApplicationFrame extends JFrame{
 
     private JButton createCalculateButton() {
         JButton button = new JButton ("Calculate");
+        this.getRootPane().setDefaultButton(button);
         button.addActionListener(factory.createActionListener("calculate"));
         return button;
     }
