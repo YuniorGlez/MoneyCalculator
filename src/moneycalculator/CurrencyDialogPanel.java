@@ -1,5 +1,6 @@
 package moneycalculator;
 
+import Model.Currency;
 import java.awt.FlowLayout;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
@@ -30,7 +31,8 @@ public class CurrencyDialogPanel extends JPanel implements CurrencyDialog{
     }
 
     private JComboBox createCurrencyDisplay() {
-        JComboBox comboBox = new JComboBox(new String[] {"EUR","USD", "CAD", "GBP"});
+        String[] divisas = {"EUR","USD", "GBP"}; //TODO De aqui cargar todas las divisas 
+        JComboBox comboBox = new JComboBox(divisas);
         comboBox.setSelectedItem(currency);
         comboBox.addItemListener(new ItemListener() {
 

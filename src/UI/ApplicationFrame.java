@@ -1,4 +1,4 @@
-package moneycalculator;
+package UI;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -8,11 +8,16 @@ import java.awt.event.KeyEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import moneycalculator.ActionListenerFactory;
+import moneycalculator.CurrencyDialog;
+import moneycalculator.CurrencyDialogPanel;
+import moneycalculator.MoneyViewer;
+import moneycalculator.MoneyViewerPanel;
 
 public class ApplicationFrame extends JFrame{
     
     private MoneyDialog moneyDialog;
-    private CurrencyDialog currencyDialog;
+    private static CurrencyDialog currencyDialog;
     private MoneyViewer moneyViewer;
     private ActionListenerFactory factory;
 

@@ -1,10 +1,13 @@
-package moneycalculator;
+package UI;
 
+import Model.Money;
 import java.awt.FlowLayout;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import moneycalculator.CurrencyDialog;
+import moneycalculator.CurrencyDialogPanel;
 
 public class MoneyDialogPanel extends JPanel implements MoneyDialog{
     private String amount = "0";

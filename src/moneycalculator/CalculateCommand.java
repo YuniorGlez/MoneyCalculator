@@ -1,5 +1,10 @@
 package moneycalculator;
 
+import UI.MoneyDialog;
+import Model.Money;
+import Model.Currency;
+import UI.ApplicationFrame;
+
 public class CalculateCommand extends Command{
 
     private final MoneyDialog moneyDialog;
@@ -18,6 +23,12 @@ public class CalculateCommand extends Command{
     }
 
     private double getExchangeRate() {
+        String url = "Rates";
+        FileExchangeRateLoader loader = new FileExchangeRateLoader(url);
+        ExchangeRate[] rates = loader.load();
+        Currency from = currencyDialog.getCurrency();
+        Currency to = ApplicationFrame.curr;
+        
         return 0.9;
     }
 

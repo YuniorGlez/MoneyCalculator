@@ -1,16 +1,16 @@
 package moneycalculator;
 
+import UI.ApplicationFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 
 public class Application {
+    private HashMap<String, Command> commandMap;
 
     public static void main(String[] args) {
         new Application().execute();
     }
-
-    private HashMap<String, Command> commandMap;
 
     private void execute() {
         createCommands(createApplicationFrame());
@@ -34,7 +34,6 @@ public class Application {
 
     private ApplicationFrame createApplicationFrame() {
         return new ApplicationFrame(new ActionListenerFactory() {
-
             @Override
             public ActionListener createActionListener(final String action) {
                 return new ActionListener() {
