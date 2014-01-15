@@ -23,12 +23,12 @@ public class CalculateCommand extends Command{
     }
 
     private double getExchangeRate() {
-        String url = "Rates";
+        /*String url = "Rates";
         FileExchangeRateLoader loader = new FileExchangeRateLoader(url);
         ExchangeRate[] rates = loader.load();
         Currency from = currencyDialog.getCurrency();
         Currency to = ApplicationFrame.curr;
-        
+        */
         return 0.9;
     }
 
